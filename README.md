@@ -33,4 +33,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 1. Build your container: `docker build -t nextjs-docker .`.
 1. Run your container: `docker run -p 3000:3000 nextjs-docker`.
 
+The `start` script in `package.json` has been modified to accept a `PORT` environment variable (for compatibility with Google Cloud Run).
+
 You can view your images created with `docker images`.
