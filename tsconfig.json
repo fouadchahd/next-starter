@@ -64,7 +64,6 @@
     "outDir": "./build",
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["./*"],
       "@api/*": ["./pages/api/*"],
       "@pages/*": ["./pages/*"],
       "@components/*": ["./components/*"],
