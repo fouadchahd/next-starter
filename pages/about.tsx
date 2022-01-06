@@ -1,13 +1,13 @@
 import React from "react";
 import type { NextPage } from "next";
 import { WebSiteHead } from "@components/WebSiteHead";
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <div>
-      <WebSiteHead title="Business IT Solutions" />
-      <h1>Home</h1>
+      <WebSiteHead title="Bits • About" />
+      <h1>About</h1>
     </div>
   );
 };
 
-export default Home;
+export default About;
