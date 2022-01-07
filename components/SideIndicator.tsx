@@ -3,10 +3,30 @@ import Image from "next/image";
 const SideIndicator = ({
   up = false,
   down = false,
+  scrollDownToId = "#",
+  scrollUpToId = "#",
 }: {
   up?: boolean;
   down?: boolean;
+  scrollDownToId?: string;
+  scrollUpToId?: string;
 }): React.ReactElement => {
+  const scrollTop = (): void => {
+    const el = document.getElementById(scrollUpToId);
+    el?.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+      inline: "start",
+    });
+  };
+  const scrollDown = (): void => {
+    const el = document.getElementById(scrollDownToId);
+    el?.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+      inline: "start",
+    });
+  };
   return (
     <div className=" absolute overflow-y-visible translate-x-1/3 right-0  mr-[100px] mt-[150px] w-[50px] h-4/5">
       <div
@@ -15,13 +35,15 @@ const SideIndicator = ({
         }
       >
         <span className={up == true ? "animate-bounce" : "invisible"}>
-          <Image
-            alt="press to scroll up"
-            src="/images/scroll-up.png"
-            width="60"
-            height="80"
-            className={"cursor-pointer"}
-          />
+          <a onClick={scrollTop}>
+            <Image
+              alt="press to scroll up"
+              src="/images/scroll-up.png"
+              width="60"
+              height="80"
+              className={"cursor-pointer"}
+            />
+          </a>
         </span>
 
         <div className="flex flex-col justify-center items-center space-y-3">
@@ -54,13 +76,15 @@ const SideIndicator = ({
           </span>
         </div>
         <span className={down == true ? "animate-bounce" : "invisible"}>
-          <Image
-            alt="press to scroll down"
-            src="/images/scroll-down.png"
-            width="60"
-            height="80"
-            className={"cursor-pointer "}
-          />
+          <a onClick={scrollDown}>
+            <Image
+              alt="press to scroll down"
+              src="/images/scroll-down.png"
+              width="60"
+              height="80"
+              className={"cursor-pointer "}
+            />
+          </a>
         </span>
       </div>
     </div>
