@@ -28,7 +28,7 @@ export const HeaderNavigation = (props: {
             { name: "Services", route: "/services" },
             { name: "Projects", route: "/projects" },
             { name: "Career", route: "/career" },
-            { name: "Contact", route: "/contact-us" },
+            { name: "Contact", route: "/contact" },
           ].map((item, index): React.ReactElement => {
             return (
               <Link href={item.route} key={index} passHref>
