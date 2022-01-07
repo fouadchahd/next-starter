@@ -5,7 +5,7 @@ export const HeaderNavigation = (props: {
   selectedItem: number;
 }): React.ReactElement => {
   return (
-    <div className="fixed mt-[80px] flex flex-row justify-between items-center px-[100px]  w-screen  ">
+    <div className="z-50 fixed mt-[80px] flex flex-row justify-between items-center px-[100px]  w-screen  ">
       <span>
         <Link href={"/"} passHref>
           <Image
