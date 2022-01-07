@@ -1,11 +1,12 @@
 import React from "react";
 import type { NextPage } from "next";
 import { WebSiteHead } from "@components/WebSiteHead";
+import { HeaderNavigation } from "@components/HeaderNavigation";
 const ContactUs: NextPage = () => {
   return (
-    <div>
+    <div className="h-screen w-screen bg-gray-100 bg-digit-background">
       <WebSiteHead title="Contact Us" />
-      <h1>Contact Us</h1>
+      <HeaderNavigation selectedItem={4} />
     </div>
   );
 };

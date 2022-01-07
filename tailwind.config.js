@@ -7,7 +7,11 @@ module.exports = {
   ],
   darkMode: "media", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "digit-background": "url('/images/background.png')",
+      },
+    },
   },
   plugins: [],
 };
