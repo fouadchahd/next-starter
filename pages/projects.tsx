@@ -10,7 +10,9 @@ const Projects: NextPage = () => {
       <HeaderNavigation selectedItem={2} />
       <div className="w-full h-full flex flex-col justify-center items-center">
         <div className="mt-20 flex text-lg ">
-          <span className="mx-5 cursor-pointer underline font-semibold">All</span>
+          <span className="mx-5 cursor-pointer underline font-semibold">
+            All
+          </span>
           <span className="mx-5 cursor-pointer">Web Applications</span>
           <span className="mx-5 cursor-pointer">Mobile Applications</span>
           <span className="mx-5 cursor-pointer">Company Solutions</span>
@@ -24,13 +26,11 @@ const Projects: NextPage = () => {
             className={"cursor-pointer"}
           />
           <div className="flex items-center justify-between w-1/2">
-
             <Image
               alt=""
               src="/images/gray-app.png"
               width="173px"
               height="349px"
-
             />
             <Image
               alt=""
@@ -54,7 +54,6 @@ const Projects: NextPage = () => {
           />
         </div>
       </div>
-
     </div>
   );
 };

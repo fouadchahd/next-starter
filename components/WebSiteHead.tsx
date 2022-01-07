@@ -6,7 +6,7 @@ export const WebSiteHead = (props: { title: string }): React.ReactElement => {
       <Head>
         <title>{props.title}</title>
         <meta name="description" content="bits kuwait website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/bits-logo.png" />
       </Head>
     </div>
   );
