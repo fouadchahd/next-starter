@@ -68,7 +68,12 @@ const About: NextPage = () => {
         <div id="Sec5" className="flex items-center relative h-screen w-screen bg-pink-300">
           <AboutContent title={"research"} number={"04"} image={"/images/AboutIllu-5.png"} content={"We will define the creative direction and put together a strategy where we outline a unique style through a visual mood board."} />
 
-          <SideIndicator up scrollUpToId={"Sec4"} />
+          <SideIndicator up down scrollDownToId={"Sec6"} scrollUpToId={"Sec4"} />
+        </div>
+        <div id="Sec6" className="flex items-center relative h-screen w-screen bg-pink-300">
+          <AboutContent title={"launch"} number={"05"} image={"/images/AboutIllu-6.png"} content={"Once your project is complete, we will prepare all final files for print and digital use as well as a guide that explains how to use your progect, if needed."} />
+
+          <SideIndicator up scrollUpToId={"Sec5"} />
         </div>
       </div>
     </>
