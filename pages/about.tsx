@@ -13,7 +13,7 @@ const About: NextPage = () => {
         <WebSiteHead title="Bits • About" />
         <div
           id="Sec1"
-          className="flex justify-center items-center relative h-screen w-screen bg-blue-300"
+          className="flex justify-center items-center relative h-screen w-screen "
         >
           <SideIndicator down scrollDownToId={"Sec2"} />
           <div className="flex justify-between items-center w-10/12 h-1/2">
@@ -31,10 +31,10 @@ const About: NextPage = () => {
             </div>
             <Image
               alt=""
-              src="/images/AboutIllu-1.png"
+              src="/images/AboutIllu-1.gif"
               width="450px"
               height="450px"
-              className={"cursor-pointer"}
+              className={"cursor-pointer bg-cover"}
             />
             <Image
               alt=""
@@ -47,12 +47,12 @@ const About: NextPage = () => {
         </div>
         <div
           id="Sec2"
-          className="relative flex  items-center  h-screen w-screen bg-green-300"
+          className="relative flex  items-center  h-screen w-screen"
         >
           <AboutContent
             title={"project brief"}
             number={"01"}
-            image={"/images/AboutIllu-2.png"}
+            image={"/images/AboutIllu-2.gif"}
             content={
               "Each project journey starts with a questionnair that will make you think deeply about your project and help you define your goals."
             }
@@ -67,12 +67,12 @@ const About: NextPage = () => {
         </div>
         <div
           id="Sec3"
-          className="flex items-center relative h-screen w-screen bg-violet-300"
+          className="flex items-center relative h-screen w-screen "
         >
           <AboutContent
             title={"onboarding"}
             number={"02"}
-            image={"/images/AboutIllu-3.png"}
+            image={"/images/AboutIllu-3.gif"}
             content={
               "After our brief, you will receive a non-compulsary detailed proposal covering the project scope, the technologies that will be used, the initial project plan."
             }
@@ -84,14 +84,11 @@ const About: NextPage = () => {
             scrollUpToId={"Sec2"}
           />
         </div>
-        <div
-          id="Sec4"
-          className="flex items-center relative h-screen w-screen bg-rose-400"
-        >
+        <div id="Sec4" className="flex items-center relative h-screen w-screen">
           <AboutContent
             title={"design"}
             number={"03"}
-            image={"/images/AboutIllu-4.png"}
+            image={"/images/AboutIllu-4.gif"}
             content={
               "After creating multiple concepts, we pick the strongest two and present them in-depth concept presentation. Each project involves two revision rounds, so we can adjust things until you are please."
             }
@@ -106,12 +103,12 @@ const About: NextPage = () => {
         </div>
         <div
           id="Sec5"
-          className="flex items-center relative h-screen w-screen bg-pink-300"
+          className="flex items-center relative h-screen w-screen "
         >
           <AboutContent
             title={"research"}
             number={"04"}
-            image={"/images/AboutIllu-5.png"}
+            image={"/images/AboutIllu-5.gif"}
             content={
               "We will define the creative direction and put together a strategy where we outline a unique style through a visual mood board."
             }
@@ -124,14 +121,11 @@ const About: NextPage = () => {
             scrollUpToId={"Sec4"}
           />
         </div>
-        <div
-          id="Sec6"
-          className="flex items-center relative h-screen w-screen bg-pink-300"
-        >
+        <div id="Sec6" className="flex items-center relative h-screen w-screen">
           <AboutContent
             title={"launch"}
             number={"05"}
-            image={"/images/AboutIllu-6.png"}
+            image={"/images/AboutIllu-6.gif"}
             content={
               "Once your project is complete, we will prepare all final files for print and digital use as well as a guide that explains how to use your progect, if needed."
             }

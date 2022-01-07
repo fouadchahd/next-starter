@@ -13,7 +13,8 @@ const ContactUs: NextPage = () => {
   return (
     <>
       <HeaderNavigation selectedItem={4} />
-      <div className="h-screen scrollbar-hide w-screen overflow-x-hidden overflow-y-visible bg-gray-100 bg-digit-background">
+      <div className="h-screen scrollbar-hide w-screen overflow-x-hidden overflow-y-visible">
+        <div className="fixed h-screen w-screen "></div>
         <WebSiteHead title="Contact Us" />
         <div
           id="Sec1"

@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "digit-background": "url('/images/background.png')",
+        "skyscraper-background": "url('/images/skyscraper.gif')",
       },
     },
   },

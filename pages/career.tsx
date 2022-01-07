@@ -6,7 +6,7 @@ import { AboutContent } from "@components/AboutContent";
 import SideIndicator from "@components/SideIndicator";
 const Career: NextPage = () => {
   return (
-    <div className="h-screen w-screen bg-gray-100 bg-digit-background">
+    <div className="h-screen scrollbar-hide overflow-y-visible overflow-x-hidden w-screen bg-gray-100 bg-digit-background">
       <WebSiteHead title="Bits • Career" />
       <HeaderNavigation selectedItem={3} />
       <div id="Sec1" className="relative flex  items-center  h-screen w-screen">
