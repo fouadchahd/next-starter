@@ -20,7 +20,7 @@ const About: NextPage = () => {
           <SideIndicator down scrollDownToId={"Sec2"} />
           <div className="flex justify-between items-center w-10/12 h-1/2">
             <div className=" w-[50%] h-full items-center flex ">
-              <div className="w-6 rounded-full h-2/3 mx-10 bg-black"></div>
+              <span className="w-6 rounded-full h-2/3 mx-10 bg-black"></span>
               <div className="flex flex-col">
                 <h1 className="font-bold   2xl:text-[32px] text-[23px] ">
                   A Professional Problem Solving Factory
