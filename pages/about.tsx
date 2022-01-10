@@ -17,13 +17,13 @@ const About: NextPage = () => {
         >
           <SideIndicator down scrollDownToId={"Sec2"} />
           <div className="flex justify-between items-center w-10/12 h-1/2">
-            <div className=" w-[600px] h-full items-center flex ">
-              <div className="w-4 rounded-full h-2/3 mx-10 bg-black"></div>
+            <div className=" w-[50%] h-full items-center flex ">
+              <div className="w-6 rounded-full h-2/3 mx-10 bg-black"></div>
               <div className="flex flex-col">
-                <h1 className="font-bold   2xl:text-[32px] text-[25px] ">
+                <h1 className="font-bold   2xl:text-[32px] text-[23px] ">
                   A Professional Problem Solving Factory
                 </h1>
-                <p className="2xl:text-[27px] text-[20px] mt-10">
+                <p className="2xl:text-[27px] text-[20px] mt-6">
                   At BITS, we pride ourself with the custom solutions we build
                   from scratch. No matter what your business line is, what
                   product you need, what daily tasks you do, we can enhance it
@@ -36,7 +36,7 @@ const About: NextPage = () => {
               src="/images/AboutIllu-1.gif"
               width="450px"
               height="450px"
-              className={"cursor-pointer bg-cover"}
+              className={" cursor-pointer bg-cover"}
             />
             <Image
               alt=""

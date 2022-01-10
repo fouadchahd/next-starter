@@ -28,7 +28,7 @@ const SideIndicator = ({
     });
   };
   return (
-    <div className=" absolute overflow-y-visible translate-x-1/3 right-0  mr-[100px] mt-[150px] w-[50px] h-4/5">
+    <div className=" absolute  overflow-y-visible  right-14  bottom-0 w-[50px] h-4/5">
       <div
         className={
           "w-full overflow-y-visible h-full my-2 flex flex-col justify-between flex-1 "
