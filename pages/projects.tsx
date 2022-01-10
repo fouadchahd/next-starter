@@ -1,11 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import type { NextPage } from "next";
 import { WebSiteHead } from "@components/WebSiteHead";
 import { HeaderNavigation } from "@components/HeaderNavigation";
 import Image from "next/image";
+import Slider from "react-slick";
 const Projects: NextPage = () => {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const imagesPath = [
+    "/images/gray-app.png",
+    "/images/color-app.png",
+    "/images/color-app.png",
+    "/images/color-app.png",
+  ];
+
+  const NextArrow = ({ onClick }): React.ReactElement => {
+    return (
+      <div onClick={onClick}>
+        <Image
+          alt=""
+          src="/images/right-arrow.png"
+          width="20px"
+          height="40px"
+          className={"cursor-pointer absolute right-2"}
+        />
+      </div>
+    );
+  };
+
+  const PrevArrow = ({ onClick }): React.ReactElement => {
+    return (
+      <div onClick={onClick}>
+        <Image
+          alt=""
+          src="/images/left-arrow.png"
+          width="20px"
+          height="40px"
+          className={"cursor-pointer"}
+        />
+      </div>
+    );
+  };
+
+  const settings = {
+    infinite: true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setImageIndex(next),
+  };
+
   return (
-    <div className="h-screen w-screen bg-gray-100  bg-digit-background">
+    <div className="h-screen w-screen bg-gray-100 relative bg-digit-background">
       <WebSiteHead title="Bits • Project" />
       <HeaderNavigation selectedItem={2} />
       <div className="w-full h-full flex flex-col justify-center items-center">
@@ -17,41 +66,30 @@ const Projects: NextPage = () => {
           <span className="mx-5 cursor-pointer">Mobile Applications</span>
           <span className="mx-5 cursor-pointer">Company Solutions</span>
         </div>
-        <div className="flex items-center  w-10/12 mt-20 justify-between">
-          <Image
-            alt=""
-            src="/images/left-arrow.png"
-            width="67px"
-            height="117px"
-            className={"cursor-pointer"}
-          />
-          <div className="flex items-center justify-between w-1/2">
-            <Image
-              alt=""
-              src="/images/gray-app.png"
-              width="173px"
-              height="349px"
-            />
-            <Image
-              alt=""
-              src="/images/color-app.png"
-              width="200px"
-              height="403px"
-            />
-            <Image
-              alt=""
-              src="/images/gray-app.png"
-              width="173px"
-              height="349px"
-            />
+        <div className="flex overflow-visible  w-10/12  h-1/2 mt-20 ">
+          <div className="w-screen">
+            <Slider {...settings}>
+              {imagesPath.map((imgSrc, idx) => (
+                <div
+                  onClick={(): void => setImageIndex(idx)}
+                  key={idx}
+                  className={
+                    idx === imageIndex
+                      ? "slide activeSlide items-center  overflow-visible"
+                      : "slide overflow-visible  items-center"
+                  }
+                >
+                  <Image
+                    className="justify-center items-center flex"
+                    alt=""
+                    src={imgSrc}
+                    width="190px"
+                    height="360px"
+                  />
+                </div>
+              ))}
+            </Slider>
           </div>
-          <Image
-            alt=""
-            src="/images/right-arrow.png"
-            width="67px"
-            height="117px"
-            className={"cursor-pointer"}
-          />
         </div>
       </div>
     </div>
