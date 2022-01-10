@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14.17.3
 
 ENV PORT 3000
 
@@ -10,7 +10,9 @@ WORKDIR /usr/src/app
 COPY package*.json /usr/src/app/
 RUN npm install
 RUN npm install --dev @types/next
-
+RUN npm i react-slick
+RUN npm i slick-carousel
+RUN npm i typewriter-effect
 # Copying source files
 COPY . /usr/src/app
 

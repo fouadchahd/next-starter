@@ -4,6 +4,9 @@ import { WebSiteHead } from "@components/WebSiteHead";
 import { HeaderNavigation } from "@components/HeaderNavigation";
 import Image from "next/image";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const Projects: NextPage = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
