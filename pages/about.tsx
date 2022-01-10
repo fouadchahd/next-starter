@@ -5,6 +5,8 @@ import { WebSiteHead } from "@components/WebSiteHead";
 import { HeaderNavigation } from "@components/HeaderNavigation";
 import SideIndicator from "@components/SideIndicator";
 import { AboutContent } from "@components/AboutContent";
+import Typewriter from "typewriter-effect";
+
 const About: NextPage = () => {
   return (
     <>
@@ -23,11 +25,17 @@ const About: NextPage = () => {
                 <h1 className="font-bold   2xl:text-[32px] text-[23px] ">
                   A Professional Problem Solving Factory
                 </h1>
-                <p className="2xl:text-[27px] text-[20px] mt-6">
-                  At BITS, we pride ourself with the custom solutions we build
-                  from scratch. No matter what your business line is, what
-                  product you need, what daily tasks you do, we can enhance it
-                  and make your life much easier using a custom software.
+                <p className="2xl:text-[27px] text-[20px] mt-10">
+                  <Typewriter
+                    options={{ cursor: "|", delay: 30 }}
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString(
+                          "At BITS, we pride ourself with the custom solutions we build from scratch. No matter what your business line is, what product you need, what daily tasks you do, we can enhance it and make your life much easier using a custom software."
+                        )
+                        .start();
+                    }}
+                  />
                 </p>
               </div>
             </div>
