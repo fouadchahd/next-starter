@@ -14,7 +14,11 @@ const Projects: NextPage = () => {
     "/images/color-app.png",
   ];
 
-  const NextArrow = ({ onClick }): React.ReactElement => {
+  const NextArrow = ({
+    onClick,
+  }: {
+    onClick?: () => void;
+  }): React.ReactElement => {
     return (
       <div
         className="w-[40px] absolute top-1/3 z-50 right-[200px]"
@@ -31,7 +35,11 @@ const Projects: NextPage = () => {
     );
   };
 
-  const PrevArrow = ({ onClick }): React.ReactElement => {
+  const PrevArrow = ({
+    onClick,
+  }: {
+    onClick?: () => void;
+  }): React.ReactElement => {
     return (
       <div
         className="w-[40px] absolute -left-[100px] top-1/3 z-50"
@@ -50,13 +58,13 @@ const Projects: NextPage = () => {
 
   const settings = {
     infinite: true,
-    lazyLoad: true,
     speed: 300,
     slidesToShow: 3,
     centerMode: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setImageIndex(next),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    beforeChange: (current: any, next: any): void => setImageIndex(next),
   };
 
   return (

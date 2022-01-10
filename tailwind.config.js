@@ -13,5 +13,6 @@ module.exports = {
         "skyscraper-background": "url('/images/skyscraper.gif')",
       },
     },
+    fontFamily: {},
   },
 };
