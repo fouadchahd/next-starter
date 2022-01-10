@@ -33,10 +33,9 @@ export const HeaderNavigation = (props: {
             return (
               <Link href={item.route} key={index} passHref>
                 <p
-                  className={`cursor-pointer text-2xl font-light ${
-                    props.selectedItem == index &&
+                  className={`cursor-pointer text-2xl font-light ${props.selectedItem == index &&
                     `underline underline-offset-[12px]`
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </p>
