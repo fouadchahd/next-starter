@@ -5,7 +5,6 @@ import { WebSiteHead } from "@components/WebSiteHead";
 import { HeaderNavigation } from "@components/HeaderNavigation";
 import SideIndicator from "@components/SideIndicator";
 import { AboutContent } from "@components/AboutContent";
-import Typewriter from "typewriter-effect";
 
 const About: NextPage = () => {
   return (
@@ -20,22 +19,16 @@ const About: NextPage = () => {
           <SideIndicator down scrollDownToId={"Sec2"} />
           <div className="flex justify-between items-center w-10/12 h-1/2">
             <div className=" w-[600px] h-full items-center flex ">
-              <div className="w-4 rounded-full h-2/3 mx-10 bg-black"></div>
+              <div className="w-5 rounded-full h-2/3 mx-10 bg-black"></div>
               <div className="flex flex-col">
                 <h1 className="font-bold   2xl:text-[32px] text-[25px] ">
                   A Professional Problem Solving Factory
                 </h1>
                 <p className="2xl:text-[27px] text-[20px] mt-10">
-                  <Typewriter
-                    options={{ cursor: "|", delay: 30 }}
-                    onInit={(typewriter) => {
-                      typewriter
-                        .typeString(
-                          "At BITS, we pride ourself with the custom solutions we build from scratch. No matter what your business line is, what product you need, what daily tasks you do, we can enhance it and make your life much easier using a custom software."
-                        )
-                        .start();
-                    }}
-                  />
+                  `At BITS, we pride ourself with the custom solutions we build
+                  from scratch. No matter what your business line is, what
+                  product you need, what daily tasks you do, we can enhance it
+                  and make your life much easier using a custom software`
                 </p>
               </div>
             </div>

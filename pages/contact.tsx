@@ -5,10 +5,14 @@ import { HeaderNavigation } from "@components/HeaderNavigation";
 import SideIndicator from "@components/SideIndicator";
 const ContactUs: NextPage = () => {
   const [name, setName] = useState("");
-  const [company, setCompany] = useState("Bits");
+  const [company, setCompany] = useState("");
   const [mobile, setMobile] = useState("");
   const [message, setMessage] = useState("");
   const [mail, setMail] = useState("");
+
+  const submitForm = (): void => {
+    console.warn("submit");
+  };
 
   return (
     <>
@@ -22,11 +26,12 @@ const ContactUs: NextPage = () => {
         >
           <div className=" w-screen pb-24 h-4/6">
             <h1 className="text-7xl mb-24">GET IN TOUCH</h1>
-            <form>
+            <form onSubmit={submitForm}>
               <div className="p-4 flex flex-row mb-10">
                 <div className="flex flex-col mr-32">
                   <p className=" text-2xl text-black">Name</p>
                   <input
+                    required
                     type="text"
                     value={name}
                     onChange={(t): void => setName(t.currentTarget.value)}
@@ -37,6 +42,7 @@ const ContactUs: NextPage = () => {
                 <div className="flex flex-col">
                   <p className=" text-2xl text-black">Company</p>
                   <input
+                    required
                     type="text"
                     value={company}
                     onChange={(t): void => setCompany(t.currentTarget.value)}
@@ -50,6 +56,7 @@ const ContactUs: NextPage = () => {
                   <p className=" text-2xl text-black">Mail</p>
                   <input
                     type="email"
+                    required
                     value={mail}
                     onChange={(t): void => setMail(t.currentTarget.value)}
                     className="outline-hidden mt-1 block w-[250px] py-2 bg-transparent border-0 border-b-2 border-black text-xl shadow-sm 
@@ -77,6 +84,11 @@ const ContactUs: NextPage = () => {
                 focus:outline-none"
                   />
                 </div>
+              </div>
+              <div>
+                <button className="ml-2 mt-10 w-[146px] h-[49px] bg-black rounded-[9px] text-white font-semibold uppercase xl:text-[23px] lg:text-[18px] py-2 px-4">
+                  Submit
+                </button>
               </div>
             </form>
           </div>
