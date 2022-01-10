@@ -16,13 +16,16 @@ const Projects: NextPage = () => {
 
   const NextArrow = ({ onClick }): React.ReactElement => {
     return (
-      <div onClick={onClick}>
+      <div
+        className="w-[40px] absolute top-1/3 z-50 right-[200px]"
+        onClick={onClick}
+      >
         <Image
           alt=""
           src="/images/right-arrow.png"
           width="20px"
           height="40px"
-          className={"cursor-pointer absolute right-2"}
+          className={"cursor-pointer "}
         />
       </div>
     );
@@ -30,7 +33,10 @@ const Projects: NextPage = () => {
 
   const PrevArrow = ({ onClick }): React.ReactElement => {
     return (
-      <div onClick={onClick}>
+      <div
+        className="w-[40px] absolute -left-[100px] top-1/3 z-50"
+        onClick={onClick}
+      >
         <Image
           alt=""
           src="/images/left-arrow.png"
@@ -54,7 +60,7 @@ const Projects: NextPage = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-gray-100 relative bg-digit-background">
+    <div className="h-screen overflow-x-hidden w-screen bg-gray-100 relative bg-digit-background">
       <WebSiteHead title="Bits • Project" />
       <HeaderNavigation selectedItem={2} />
       <div className="w-full h-full flex flex-col justify-center items-center">
@@ -66,8 +72,8 @@ const Projects: NextPage = () => {
           <span className="mx-5 cursor-pointer">Mobile Applications</span>
           <span className="mx-5 cursor-pointer">Company Solutions</span>
         </div>
-        <div className="flex overflow-visible  w-10/12  h-1/2 mt-20 ">
-          <div className="w-screen">
+        <div className="flex overflow-visible  w-10/12  h-1/2  ">
+          <div className="w-screen mt-20">
             <Slider {...settings}>
               {imagesPath.map((imgSrc, idx) => (
                 <div
