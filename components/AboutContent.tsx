@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Typewriter from "typewriter-effect";
 
 export const AboutContent = (props: {
   title: string;
@@ -20,7 +21,14 @@ export const AboutContent = (props: {
         <h1 className="leading-none font-bold 2xl:text-[40px] text-[30px] uppercase">
           {props.title}
         </h1>
-        <p className="2xl:text-[27px] text-[23px] mt-5">{props.content}</p>
+        <p className="2xl:text-[27px] text-[23px] mt-5">
+          <Typewriter
+            options={{ cursor: "|", delay: 30 }}
+            onInit={(typewriter) => {
+              typewriter.typeString(props.content).start();
+            }}
+          />
+        </p>
         {props.joinButton && (
           <button className="mt-10 w-[146px] h-[49px] bg-black rounded-[9px] text-white font-semibold uppercase xl:text-[25px] lg:text-[20px] py-2 px-4">
             Join Us
